@@ -1,0 +1,42 @@
+.dashboard-header-container {
+  height: 12rem !important;
+  // background: rgb(255, 255, 255) !important;
+  display: block !important;
+  // margin-top: 2rem;
+  padding-top: 4rem;
+
+  .analytics {
+    padding: 23px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.5rem;
+    margin-bottom: 3rem;
+
+    .analytic {
+      box-shadow: rgba(17, 17, 26, 0.1) 2px 0px 16px;
+      border-radius: 10px;
+      display: flex;
+      padding: 0.5rem 2rem;
+      background: radial-gradient(
+          circle at 94.02% 88.03%,
+          #54a4ff,
+          transparent 100%
+        ),
+        radial-gradient(circle at 25.99% 27.79%, #031059, transparent 100%),
+        radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+      .analytic-info h4 {
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 0.98rem;
+      }
+      .analytic-info h1 {
+        color: #ffffff;
+        font-weight: 600;
+      }
+      .analytic-info h1 small {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

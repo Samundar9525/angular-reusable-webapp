@@ -1,0 +1,16 @@
+<div
+[style.width.%]="width"
+[style.top.%]="top"
+[style.left.%]="left"
+class="modal-content">
+	<header>
+		<h2>{{headerName}}</h2>
+	</header>
+	<div class="content">
+    <ng-content></ng-content>
+  </div>
+	<footer>
+		<label for="modal" class="button success" *ngIf="showButton1">{{button1Name}}</label>
+		<label for="modal" class="button danger" *ngIf="showButton2">{{button2Name}}</label>
+	</footer>
+</div>

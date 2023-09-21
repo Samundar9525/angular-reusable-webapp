@@ -1,0 +1,37 @@
+<nav>
+  <div class="wrapper">
+    <!-- <div class="logo"><div class="menu">Logo</div></div> -->
+    <ul class="nav-links">
+      <li *ngFor="let menu of menuList">
+        <div class="menu">{{ menu.text }}</div>
+        <ng-container *ngIf="menu.subMenu.length >= 1">
+          <ul class="drop-menu">
+            <li *ngFor="let submenu of menu.subMenu">
+              <div class="menu">{{ submenu.text }}</div>
+            </li>
+          </ul>
+        </ng-container>
+      </li>
+      <li>
+        <div class="desktop-item menu">Mega Menu</div>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row" *ngFor="let mgmenu of megaMenu | keyvalue">
+              <ng-container *ngIf="mgmenu.key === 'section0'">
+                  <img
+                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                  />
+              </ng-container>
+              <ng-container *ngIf="mgmenu.key !== 'section0'">
+                <header>Submenu Heading</header>
+                <ul class="mega-links">
+                  <li *ngFor="let submenu of mgmenu.value"><div class="menu">{{submenu.text}}</div></li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
